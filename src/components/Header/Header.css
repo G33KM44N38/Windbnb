@@ -1,0 +1,65 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100&display=swap');
+
+/*---- VAR ---*/
+
+.header-box{
+    --box-style:  0.2px rgba(133, 133, 133, 0.226) solid;
+}
+
+
+/* ================================ header ================================*/
+.header-box {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* ================================ logo ================================*/
+
+.header-box > img {
+    height: 1rem;
+    width: auto;
+    color: #eb5756;
+}
+
+/* ================================ search ================================*/
+
+.resaerch-fields{
+    display: flex;
+    height: 3rem;
+    border: var(--box-style);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 1px 3px rgb(207, 207, 207)
+}
+
+.resaerch-fields > *, option{
+    font-family: 'Catamaran', sans-serif;
+    padding: 10px;
+    border: none;
+}
+
+    /******************** selection fields ********************/
+
+    #selected-location{
+        appearance: none;
+    }
+
+    /******************** guest fields ********************/
+
+    #input-guest{
+        width: 70px;
+        border-left: var(--box-style);
+        border-right: var(--box-style);
+    }
+
+    /******************** image fields ********************/
+    .loupe{
+        width: 30px;
+        height: 20px;
+        margin: auto;
+        color: #eb5756;
+    }
