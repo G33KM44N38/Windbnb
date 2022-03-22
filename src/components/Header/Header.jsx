@@ -6,14 +6,16 @@ const logo = require("../../assets/logo.png");
 function Header() {
   return (
     <div className='header-box'>
+      <div className='logo' >
         <img src={logo} alt="logo" />
-        <div className='resaerch-fields'>
-          <select id="selected-location">
-            <option value="Helsinki, Finland">Helsinki, Finland</option>
-          </select>
-          <input type="text" id='input-guest' placeholder="Add guests"/>
-          <AiOutlineSearch className='loupe'/>
-        </div>
+      </div>
+      <div className='resaerch-fields'>
+        <select id="selected-location">
+          <option value="Helsinki, Finland">Helsinki, Finland</option>
+        </select>
+        <input type="text" id='input-guest' placeholder="Add guests"/>
+        <AiOutlineSearch className='loupe'/>
+      </div>
     </div>
   )
 }

@@ -29,6 +29,7 @@
 
 .resaerch-fields{
     display: flex;
+    flex-direction: row;
     height: 3rem;
     border: var(--box-style);
     border-radius: 10px;
@@ -56,10 +57,34 @@
         border-right: var(--box-style);
     }
 
-    /******************** image fields ********************/
+    /******************** loupe fields ********************/
     .loupe{
         width: 30px;
         height: 20px;
         margin: auto;
         color: #eb5756;
     }
+
+/****************** Media Queries ******************/
+
+
+@media screen and (max-width: 600px){
+
+    .header-box{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logo{
+        margin-bottom: 30px;
+    }
+
+    .resaerch-fields{
+        width: 70%;
+        margin: auto;
+    }
+
+    #selected-location, #input-guest{
+        flex-grow: 1;
+    }
+ }

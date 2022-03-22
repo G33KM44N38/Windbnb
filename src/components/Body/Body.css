@@ -79,3 +79,19 @@
 .star-icon{
     color: #eb5756;
 }
+
+/****************** Media Queries ******************/
+
+
+@media screen and (max-width: 600px){
+
+   .list-stays{
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+   } 
+
+   .place-body{
+       width: 100%;
+   }
+}
