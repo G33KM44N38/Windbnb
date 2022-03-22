@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@200;800&display=swap');
+
+
+/* === body's header ===*/
+
+.header-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.stay-place-header{
+    font-family: 'Catamaran', sans-serif;
+    font-size: medium;
+    font-weight: 800;
+}
+
+.number-place-header{
+    font-size: small;
+}
+
+/* === body's content === */
+
+.list-stays{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* === body's content description === */
+
+.place-body{
+    width: 30%;
+    height: auto;
+    margin-bottom: 40px;
+}
+
+.stays-picture{
+    border-radius: 10px;
+    width: 100%;
+    height: 185px;
+    object-fit: cover;
+    margin-bottom: 5px;
+}
+
+.stays-type{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.type-appartment{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+#super-host{
+    padding: 3px;
+    margin-right: 7px;
+    border: 2px solid gray;
+    border-radius: 11px;
+    font-size: small;
+    color: gray;
+}
+
+.type-appartment-info{
+    color: grey;
+    font-size: small;
+}
+
+.stars{
+    display: flex;
+    flex-direction: row;
+}
+
+.star-icon{
+    color: #eb5756;
+}

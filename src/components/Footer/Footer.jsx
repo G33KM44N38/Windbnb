@@ -3,7 +3,7 @@ import './Footer.css'
 
 function Footer() {
   return (
-    <div className='footer'>Created by G33KM44N38 - devChallenge.io</div>
+    <div className='footer'>Created by <a href="https://github.com/G33KM44N38"> Kylian Mayang-Fournier</a> - devChallenge.io</div>
   )
 }
 

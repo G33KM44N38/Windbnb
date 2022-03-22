@@ -1,4 +1,10 @@
 .footer{
     display: flex;
     justify-content: center;
+    color: grey;
+    font-size: small;
+}
+
+a{
+    color: gray;
 }
