@@ -1,0 +1,21 @@
+.location-place {
+    margin-top: 33px;
+}
+
+.location-place-list {
+    display: flex;
+    align-items: center;
+    color: gray;
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+.location-place-list:hover {
+    cursor: pointer;
+}
+
+.location-icon {
+    font-size: 20px;
+    margin-right: 10px;
+    color: rgba(0, 0, 0, 0.664);
+}

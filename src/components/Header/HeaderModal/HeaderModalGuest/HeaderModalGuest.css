@@ -1,0 +1,58 @@
+.controllers {
+    --margin-controllers: 15px;
+    --color-controllers: grey;
+    --dimension-button: 25px;
+}
+
+/** GENERAL CONTENT **/
+
+.guest-controllers{
+    margin-top: 50px;
+}
+
+.guest-controllers-content{
+    margin-top: 20px;
+}
+
+.type-of-guest{
+    color: black;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.rules-of-guest{
+    margin-top: 0;
+    color: gray;
+    font-size: 15px;
+}
+
+/** controlers **/
+
+.controllers{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.controllers > div {
+    margin-left: var(--margin-controllers);
+    margin-right: var(--margin-controllers);
+}
+
+/*button*/
+.controllers > button {
+    width: var(--dimension-button);
+    height: var(--dimension-button);
+    background: none;
+    border: 1px solid var(--color-controllers);
+    border-color: var(--color-controllers);
+    border-radius: 4px;
+}
+
+button{
+    display: flex;
+    color: var(--color-controllers);
+    justify-content: center;
+    align-items: center;
+}
