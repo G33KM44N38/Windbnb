@@ -1,31 +1,25 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import { AiOutlineSearch } from 'react-icons/ai'
 import HeaderModal from './HeaderModal/HeaderModal';
+import getAllCountries from '../../library/Search';
 import './Header.css'
-import axios from 'axios';
-import { useEffect } from 'react';
-const logo = require("../../assets/logo.png");
 
-var place = [];
+const logo = require("../../assets/logo.png");
 
 function Header() {
 
   const [showModal, setShowModal] = useState(false)
   const [numberGuest, setNumberGuest]  = useState(0);
   const [placeChoice, setPlaceChoice] = useState('');
+  const [place, setPlace] = useState([]);
 
   const openModal = () => {
     setShowModal(prev => !prev);
   };
 
-  
   useEffect(() => {
-    axios.get('https://restcountries.com/v3.1/all')
-    .then((res) => {
-      place.push(...res.data);
-    });
-  }, []) 
-  
+    setPlace(() => getAllCountries())
+  }, [])
 
   return (
     <div>

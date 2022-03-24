@@ -2,6 +2,7 @@ import React, { useRef, useState} from 'react'
 import { AiOutlineSearch } from 'react-icons/ai'
 import HeaderModalLocation from './HeaderModalLocation/HeaderModalLocation'
 import HeaderModalGuest from './HeaderModalGuest/HeaderModalGuest'
+import getAllCountries from '../../../library/Search'
 import './HeaderModal.css'
 
 function HeaderModal({showModal, setShowModal, place, numberGuest, setNumberGuest, placeChoice, setPlaceChoice}) {
@@ -17,6 +18,11 @@ function HeaderModal({showModal, setShowModal, place, numberGuest, setNumberGues
       setShowModal(false)
     }
   }
+  
+  const Search = (e) => {
+    setPlaceChoice(e.target.value) 
+    console.log(place.data.indexOf(placeChoice));
+  }
 
   return (
     <div>
@@ -25,7 +31,7 @@ function HeaderModal({showModal, setShowModal, place, numberGuest, setNumberGues
           <div className='header-overlay-contents'>
             <div className='header-overlay-location' onClick={() => setMenu('locationList')}>
               <p>LOCATION</p>
-              <input type="text" id="select-location" placeholder='choose a place' onChange={(e) => (setPlaceChoice(e.target.value))} value={placeChoice}/>
+              <input type="text" id="select-location" placeholder='choose a place' onChange={(e) => Search(e)} value={placeChoice}/>
               {
                 menu === 'locationList' ? <HeaderModalLocation place={place} setPlaceChoice={setPlaceChoice}/> : null
               }

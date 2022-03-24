@@ -1,5 +1,7 @@
 .location-place {
+    height: 250px;
     margin-top: 33px;
+    overflow-y: scroll;
 }
 
 .location-place-list {
