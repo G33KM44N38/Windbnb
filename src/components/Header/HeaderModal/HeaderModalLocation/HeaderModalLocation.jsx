@@ -7,8 +7,8 @@ function HeaderModalLocation({place, setPlaceChoice}) {
   return (
     <div className='location-place'>
         {
-            place?.map(({name}) => (
-                <div  className='location-place-list' onClick={() => setPlaceChoice(name)}>
+            place?.map(({name}, index) => (
+                <div key={index}  className='location-place-list' onClick={() => setPlaceChoice(name)}>
                     <IoLocationSharp className='location-icon'/>{name}
                 </div>
         ))}

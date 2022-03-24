@@ -48,7 +48,7 @@ function Header() {
           <div id="selected-location">
             {placeChoice? placeChoice: "Choose a place"}
           </div>
-          <input type="text" id='input-guest' placeholder="Add guests" value={numberGuest + ' guests'}/>
+          <input type="text" id='input-guest' placeholder="Add guests" value={numberGuest + ' guests'} onChange={(e) => (e.target.value)}/>
           <AiOutlineSearch className='loupe'/>
         </div>
       </div>

@@ -25,15 +25,15 @@ function HeaderModal({showModal, setShowModal, place, numberGuest, setNumberGues
           <div className='header-overlay-contents'>
             <div className='header-overlay-location' onClick={() => setMenu('locationList')}>
               <p>LOCATION</p>
-              <input type="text" id="select-location" placeholder='choose a place' value={placeChoice}/>
-              <input type="text" value=""/>
+              <input type="text" id="select-location" placeholder='choose a place' value={placeChoice} onChange={(e) => (e.target.value)}/>
+              <input type="text" value="" onChange={(e) => (e.target.value)}/>
               {
                 menu === 'locationList' ? <HeaderModalLocation place={place} setPlaceChoice={setPlaceChoice}/> : null
               }
             </div>
             <div className='header-overlay-guests' onClick={() => setMenu('guestList')}>
               <p>GUESTS</p>
-              <input type="text" placeholder='Add Guest' value={numberGuest + ' guests'}/>
+              <input type="text" placeholder='Add Guest' value={numberGuest + ' guests'} onChange={(e) => (e.target.value)}/>
               {
                 menu === 'guestList' ? 
                   <HeaderModalGuest 
