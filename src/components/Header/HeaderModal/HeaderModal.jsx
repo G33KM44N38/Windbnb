@@ -32,16 +32,15 @@ function HeaderModal({showModal, setShowModal, place, numberGuest, setNumberGues
             </div>
             <div className='header-overlay-guests' onClick={() => setMenu('guestList')}>
               <p>GUESTS</p>
-              <input type="text" placeholder='Add Guest' value={numberGuest + ' guests'} onChange={(e) => (e.target.value)}/>
+              <div id="guest-input">
+                {numberGuest + ' guests'}
+              </div>
               {
                 menu === 'guestList' ? 
                   <HeaderModalGuest 
-                  setNumberGuest={setNumberGuest} 
-                  numberGuest={numberGuest}
-                  numberAdult={numberAdult}
-                  setNumberAdult={setNumberAdult} 
-                  numberChildren={numberChildren}
-                  setNumberChildren={setNumberChildren}
+                  numberGuest={numberGuest} setNumberGuest={setNumberGuest}
+                  numberAdult={numberAdult} setNumberAdult={setNumberAdult} 
+                  numberChildren={numberChildren} setNumberChildren={setNumberChildren}
                   />
                 : null
               }

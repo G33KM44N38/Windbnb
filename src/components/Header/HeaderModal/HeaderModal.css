@@ -37,13 +37,23 @@ select, input {
     border: none;
 }
 
-
+#select-location:focus, #guest-input:focus{
+    outline: none;
+}
 
 /*===== location ====*/
 
 .header-overlay-location{
     border-top-left-radius: var(--radius);
-    border-bottom-left-radius: var(--radius);}
+    border-bottom-left-radius: var(--radius);
+}
+
+
+/* == guest ==*/
+
+#guest-input:hover{
+    cursor: default;
+}
 
 /*===== button ====*/
 

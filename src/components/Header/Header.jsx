@@ -2,22 +2,11 @@ import React, {useState} from 'react'
 import { AiOutlineSearch } from 'react-icons/ai'
 import HeaderModal from './HeaderModal/HeaderModal';
 import './Header.css'
+import axios from 'axios';
+import { useEffect } from 'react';
 const logo = require("../../assets/logo.png");
 
-var place = [
-  {
-    name: 'Helsinki, finland',
-  },
-  {
-    name: 'Turkuu, finland',
-  },
-  {
-    name: 'Oulu, finland',
-  },
-  {
-    name: 'Vaasa, finland',
-  },
-]
+var place = [];
 
 function Header() {
 
@@ -29,16 +18,22 @@ function Header() {
     setShowModal(prev => !prev);
   };
 
+  
+  useEffect(() => {
+    axios.get('https://restcountries.com/v3.1/all')
+    .then((res) => {
+      place.push(...res.data);
+    });
+  }, []) 
+  
+
   return (
     <div>
       <HeaderModal 
-      showModal={showModal} 
-      setShowModal={setShowModal} 
-      place={place} 
-      numberGuest={numberGuest} 
-      setNumberGuest={setNumberGuest}
-      placeChoice={placeChoice}
-      setPlaceChoice={setPlaceChoice}
+      showModal={showModal} setShowModal={setShowModal} 
+      place={place}
+      numberGuest={numberGuest} setNumberGuest={setNumberGuest}
+      placeChoice={placeChoice} setPlaceChoice={setPlaceChoice}
       />
       <div className='header-box'>
         <div className='logo' >
