@@ -26,6 +26,7 @@ function HeaderModal({showModal, setShowModal, place, numberGuest, setNumberGues
             <div className='header-overlay-location' onClick={() => setMenu('locationList')}>
               <p>LOCATION</p>
               <input type="text" id="select-location" placeholder='choose a place' value={placeChoice}/>
+              <input type="text" value=""/>
               {
                 menu === 'locationList' ? <HeaderModalLocation place={place} setPlaceChoice={setPlaceChoice}/> : null
               }
