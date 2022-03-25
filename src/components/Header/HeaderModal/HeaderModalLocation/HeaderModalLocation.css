@@ -1,6 +1,6 @@
 .location-place {
     height: 250px;
-    margin-top: 33px;
+    margin-top: 20px;
     overflow-y: scroll;
 }
 
@@ -20,4 +20,19 @@
     font-size: 20px;
     margin-right: 10px;
     color: rgba(0, 0, 0, 0.664);
+}
+
+/****************** Media Queries ******************/
+
+@media screen and (max-width: 600px) {
+    
+    .location-place{
+        margin-top: 75px;
+        height: 400px;
+    }
+
+    .location-place-list{
+        color: black;
+        font-size: 30px;
+    }
 }

@@ -87,4 +87,11 @@
     #selected-location, #input-guest{
         flex-grow: 1;
     }
+
+    #selected-location {
+        width: 30%;
+        height: 10px;
+        flex-wrap: nowrap;
+        overflow: hidden;
+    }
  }

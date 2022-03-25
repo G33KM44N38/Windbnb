@@ -30,6 +30,7 @@ function HeaderModal({showModal, setShowModal, place, numberGuest, setNumberGues
       {showModal?
         <div className='header-overlay'  ref={modalRef} onClick={closeModal}>
           <div className='header-overlay-contents'>
+            <div className="edit-header"> <div> Edit your search </div><button onClick={() => setShowModal(false)}>X</button></div>
             <div className='header-overlay-location' onClick={() => setMenu('locationList')}>
               <p>LOCATION</p>
               <input type="text" id="select-location" placeholder='choose a place' onChange={(e) => Search(e)}  value={placeChoice}/>
@@ -40,7 +41,7 @@ function HeaderModal({showModal, setShowModal, place, numberGuest, setNumberGues
             <div className='header-overlay-guests' onClick={() => setMenu('guestList')}>
               <p>GUESTS</p>
               <div id="guest-input">
-                {numberGuest + ' guests'}
+                {numberGuest? numberGuest + ' guests' : 'Add Guest'}
               </div>
               {
                 menu === 'guestList' ? 

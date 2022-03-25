@@ -35,7 +35,7 @@ function Header() {
         </div>
         <div onClick={() => openModal()} className='resaerch-fields'>
           <div id="selected-location">
-            {placeChoice? placeChoice: "Choose a place"}
+            {placeChoice? placeChoice: "destination"}
           </div>
           <input type="text" id='input-guest' placeholder="Add guests" value={numberGuest + ' guests'} onChange={(e) => (e.target.value)}/>
           <AiOutlineSearch className='loupe'/>
