@@ -106,6 +106,7 @@ input {
         display: flex;
         border: none;
         margin: 0;
+        margin-top: 20px;
         width: 93%;
         justify-content: space-between;
         align-items: center;
