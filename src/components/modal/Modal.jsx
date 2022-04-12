@@ -9,13 +9,16 @@ function Modal({setModal, modal, ModalImage, ModalSuperHost, ModalType, ModalNum
 
             <img className='modal-image' src={ModalImage} alt="stays" />
             <div className="modal-footer">
-
-                {ModalSuperHost ? <div id='super-host'>SUPER HOST</div>: ""}
-                <div style={{display: 'flex', justifyContent: "space-between"}}>
-                    <p>{ModalType}</p>
-                    <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
-                        <RiStarSFill className='star-icon'/>
-                        {ModalNumberOfStars}
+                <div className='modal-description-header'>
+                    <div className='modal-footer-header'>
+                        <div className='modal-footer-header-info'>
+                            {ModalSuperHost ? <div id='super-host'>SUPER HOST</div>: ""}
+                            <p>{ModalType}</p>
+                        </div>
+                        <div className='modal-number-stars'>
+                            <RiStarSFill className='star-icon'/>
+                            {ModalNumberOfStars}
+                        </div>
                     </div>
                 </div>
                 {ModalDescription}
