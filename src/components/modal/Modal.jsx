@@ -6,7 +6,7 @@ function Modal({setModal, modal, ModalImage, ModalSuperHost, ModalType, ModalNum
   return (
       <div id='modal' onClick={() => setModal(!modal)}>
           <div className='modal-content' onClick={e => e.stopPropagation()}>
-
+              <button className='modal-close-button' onClick={() => setModal(false)}>x</button>
             <img className='modal-image' src={ModalImage} alt="stays" />
             <div className="modal-footer">
                 <div className='modal-description-header'>
