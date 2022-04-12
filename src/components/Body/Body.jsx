@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './Body.css';
 import image1 from '../../assets/StaysPicture/image1.jpeg';
 import image2 from '../../assets/StaysPicture/image2.jpeg';
@@ -6,8 +6,8 @@ import image3 from '../../assets/StaysPicture/image3.jpeg';
 import image4 from '../../assets/StaysPicture/image4.jpeg';
 import image5 from '../../assets/StaysPicture/image5.jpeg';
 import image6 from '../../assets/StaysPicture/image6.jpeg';
-
 import {RiStarSFill} from 'react-icons/ri';
+import Modal from '../modal/Modal';
 
 const place = [
   {
@@ -55,6 +55,24 @@ const place = [
 ]
 
 function Body() {
+
+  const [modal, setModal] = useState(false)
+  const [ModalImage, setModalImage] = useState("");
+  const [ModalSuperHost, setModalSuperHost] = useState(false);
+  const [ModalType, setModalType] = useState("");
+  const [ModalNumberOfStars, setModalNumberOfStars] = useState(0);
+  const [ModalDescription, setModalDescription] = useState("");
+
+
+  const setModalContent = (image, superHost, type, numberStars, description) => {
+    setModalImage(image);
+    setModalSuperHost(superHost);
+    setModalType(type);
+    setModalNumberOfStars(numberStars);
+    setModalDescription(description);
+    setModal(true);
+  }
+
   return (
     <div id='body'>
       <div className="header-body">
@@ -66,7 +84,7 @@ function Body() {
           place?.map(({image, superHost, type, numberStars, description}, index) => {
             return(
               <div className='place-body' key={index}>
-                <img className='stays-picture' src={image} alt="stays" />
+                <img className='stays-picture' src={image} alt="stays" onClick={() => setModalContent(image, superHost, type, numberStars, description)}/>
                 <div className="stays-footer">
                   <div className='stays-type'>
                     <div className="type-appartment">
@@ -87,6 +105,9 @@ function Body() {
           })
         }
       </div>
+      
+  {modal? <Modal setModal={setModal} modal={modal} ModalImage={ModalImage} ModalSuperHost={ModalSuperHost} ModalType={ModalType} ModalNumberOfStars={ModalNumberOfStars} ModalDescription={ModalDescription}/> : null}
+
     </div>
   )
 }
